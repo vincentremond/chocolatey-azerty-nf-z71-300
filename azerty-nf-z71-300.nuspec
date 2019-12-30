@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>azerty-nf-z71-300</id>
+    <version>1.7.0.0</version>
+    <packageSourceUrl>https://github.com/vincentremond/chocolatey-azerty-nf-z71-300/</packageSourceUrl>
+    <owners>Vincent Rémond</owners>
+    <title>Optimized Azerty Layout for Windows (Install)</title>
+    <authors>springcomp</authors>
+    <projectUrl>https://github.com/springcomp/optimized-azerty-win/</projectUrl>
+    <licenseUrl>https://github.com/springcomp/optimized-azerty-win/blob/master/LICENCE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/springcomp/optimized-azerty-win/</projectSourceUrl>
+    <tags>azerty afnor norme NF FR Z71-300 keyboard layout</tags>
+    <summary>Installs a keyboard layout as « Français - AZERTY NF Z71-300 ».</summary>
+    <description>
+The recently standardized AZERTY layout is designed to be very similar to the AZERTY layout in order to minimize disruption to users who write in the French language. Yet, the new layout is superior in many ways:
+
+- It includes *all* the characters that are required to write proper French, including accented upper case letters (for instance, `É`, `œ` and `«`).
+- It is designed to be more user-friendly and allow quicker typing.
+- It includes almost 60 additional characters used in foreign languages and technical publications.
+- Yet, those characters are easy to find thanks to clusters of likewise characters at sensible locations.
+
+This package installs this new layout on windows.
+    </description>
+    <releaseNotes>
+# 1.7.0.0
+
+This release changes the layout :
+
+- Emitting `ϴ` GREEK CAPITAL THETA SYMBOL (U+03F4) on `AltGr`+`Shift`+`Q`, instead of incorrect `Θ` GREEK CAPITAL LETTER THETA (U+0398) previously.
+
+Some rromani languages use a letter whose glyph is derived from the Greek letter theta, even though they use a latin alphabet. However, the Unicode standard does not currently encode this letter. Therefore, the standard mandates that approximate characters be used instead.
+
+- In most cases, the latin small letter theta gkyph is very similar to that of GREEK SMALL LETTER THETA (U+03B8)
+- The latin capital letter theta has a glyph that most resembles the GREEK CAPITAL THETA SYMBOL (U+03F4).
+
+That is why this character is assigned a position on the base layout, and is not to be confused with Greek characters found on the `AltGr`+`Eu` layer.
+
+Veuillez consulter la [procédure d’installation détaillée](https://springcomp.github.io/optimized-azerty-win/download.html).
+    </releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey" version="0.9.8.21" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
